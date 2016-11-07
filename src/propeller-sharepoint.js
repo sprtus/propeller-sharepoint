@@ -25,7 +25,8 @@ class SharePoint extends propeller.Deployer {
     // authenticate to sharepoint, send to destination
     return s.pipe(spsave({
       siteUrl: connection.site,
-      folder: dest
+      folder: dest,
+      flatten: false
     }, {
       username: connection.user,
       password: connection.pass
