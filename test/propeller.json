@@ -1,0 +1,14 @@
+{
+  "environments": {
+    "o365": {
+      "type": "sharepoint",
+      "src": "build/**",
+      "dest": "_catalogs/masterpage/test",
+      "connection": {
+        "site": "https://tenant.sharepoint.com/",
+        "user": "hello@contoso.com",
+        "pass": "mypassword"
+      }
+    }
+  }
+}

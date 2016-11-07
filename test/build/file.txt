@@ -1,0 +1,1 @@
+This file will be copied to Office 365 via Node.js and gulp-propeller-sharepoint.

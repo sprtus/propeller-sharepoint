@@ -1,0 +1,30 @@
+{
+  "name": "gulp-propeller-sharepoint",
+  "version": "1.0.0",
+  "description": "A SharePoint deployer plugin for Propeller.",
+  "main": "src/propeller-sharepoint.js",
+  "scripts": {
+    "test": "cd test && gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oldrivercreative/propeller-sharepoint.git"
+  },
+  "keywords": [
+    "sharepoint",
+    "gulp",
+    "propeller"
+  ],
+  "author": "Kyle Schaeffer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oldrivercreative/propeller-sharepoint/issues"
+  },
+  "homepage": "https://github.com/oldrivercreative/propeller-sharepoint#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-propeller": "^1.0.3",
+    "gulp-spsave": "^3.0.0",
+    "gulp-util": "^3.0.7"
+  }
+}
