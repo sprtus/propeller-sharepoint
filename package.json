@@ -1,6 +1,6 @@
 {
-  "name": "gulp-propeller-sharepoint",
-  "version": "1.0.0",
+  "name": "propeller-sharepoint",
+  "version": "1.0.1",
   "description": "A SharePoint deployer plugin for Propeller.",
   "main": "src/propeller-sharepoint.js",
   "scripts": {
