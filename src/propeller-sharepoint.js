@@ -38,7 +38,7 @@ class SharePoint extends propeller.Deployer {
 
     // authenticate to sharepoint, send to destination
     return s.pipe(spsave({
-      siteUrl: connection.site,
+      siteUrl: site,
       folder: dest,
       flatten: false
     }, connection));
@@ -56,10 +56,10 @@ class SharePoint extends propeller.Deployer {
     if(!connection.site) throw new gutil.PluginError(PLUGIN_NAME, `Deployer: 'site' is required`);
 
     // user
-    if(!connection.user) throw new gutil.PluginError(PLUGIN_NAME, `Deployer: 'user' is required`);
+    if(!connection.user && !connection.username) throw new gutil.PluginError(PLUGIN_NAME, `Deployer: 'user' is required`);
 
     // pass
-    if(!connection.pass) throw new gutil.PluginError(PLUGIN_NAME, `Deployer: 'pass' is required`);
+    if(!connection.pass && !connection.password) throw new gutil.PluginError(PLUGIN_NAME, `Deployer: 'pass' is required`);
 
   }
 
