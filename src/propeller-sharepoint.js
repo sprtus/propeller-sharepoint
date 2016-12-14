@@ -22,15 +22,26 @@ class SharePoint extends propeller.Deployer {
     // get source files
     let s = gulp.src(src);
 
+    // get connection site
+    let site = connection.site;
+    delete connection.site;
+
+    // set connection user/pass shorthands
+    if(connection.user){
+      connection.username = connection.user;
+      delete connection.user;
+    }
+    if(connection.pass){
+      connection.password = connection.pass;
+      delete connection.pass;
+    }
+
     // authenticate to sharepoint, send to destination
     return s.pipe(spsave({
       siteUrl: connection.site,
       folder: dest,
       flatten: false
-    }, {
-      username: connection.user,
-      password: connection.pass
-    }));
+    }, connection));
 
   }
 
