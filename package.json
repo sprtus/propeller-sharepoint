@@ -1,6 +1,6 @@
 {
   "name": "propeller-sharepoint",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A SharePoint deployer plugin for Propeller.",
   "main": "src/propeller-sharepoint.js",
   "scripts": {
