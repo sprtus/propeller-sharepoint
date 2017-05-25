@@ -15,7 +15,7 @@
     "gulp",
     "propeller"
   ],
-  "author": "Kyle Schaeffer",
+  "author": "@kyleschaeffer",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/oldrivercreative/propeller-sharepoint/issues"
@@ -23,8 +23,9 @@
   "homepage": "https://github.com/oldrivercreative/propeller-sharepoint#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-propeller": "^1.0.3",
+    "gulp-exclude-gitignore": "^1.1.1",
+    "gulp-propeller": "^1.2.0",
     "gulp-spsave": "^3.0.0",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.8"
   }
 }

@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const gutil = require('gulp-util');
 const propeller = require('gulp-propeller');
 const spsave = require('gulp-spsave');
+const excludeGitignore = require('gulp-exclude-gitignore');
 const PLUGIN_NAME = 'propeller-sharepoint';
 
 class SharePoint extends propeller.Deployer {
@@ -12,15 +13,19 @@ class SharePoint extends propeller.Deployer {
    * @param {string} src
    * @param {string} dest
    * @param {Object} connection
+   * @param {boolean} gitignore
    * @return {Object} stream
    */
-  deploy(src, dest, connection){
+  deploy(src, dest, connection, gitignore){
 
     // validate connection
     this.validate(connection);
 
     // get source files
     let s = gulp.src(src);
+
+    // exclude files ignored in .gitignore
+		if(gitignore) s = s.pipe(excludeGitignore()).on('error', gutil.log);
 
     // get connection site
     let site = connection.site;

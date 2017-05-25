@@ -16,6 +16,7 @@ Create a `propeller.json` file in your project directory that contains your Shar
       "type": "sharepoint",
       "src": "build/**",
       "dest": "_catalogs/masterpage/test",
+      "gitignore": false,
       "connection": {
         "site": "https://mytenant.sharepoint.com/",
         "user": "hello@contoso.com",
